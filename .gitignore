@@ -1,4 +1,5 @@
 .venv/
+.env
 data/
 !data/sample_data.csv  # Optional: Keep a small sample for testing
 *.csv
