@@ -13,7 +13,7 @@ BUCKET_NAME = os.getenv('AWS_BUCKET_NAME')
 def clean_file(file_path):
     # Get the filename without the path or extension (e.g., 'indego-trips-2025-q3')
     base_name = os.path.basename(file_path).replace('.csv', '')
-    s3_path = f's3://{BUCKET_NAME}/processed/{base_name}.parquet'
+    s3_path = f's3://{BUCKET_NAME}/processed/trips/{base_name}.parquet'
 
     print(f"\n--- Processing {base_name} ---")
 
