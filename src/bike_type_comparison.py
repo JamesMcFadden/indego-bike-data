@@ -12,7 +12,7 @@ def bike_type_comparison():
 
     # print(round(100*df['bike_type'].value_counts()['standard']/len(df)), "% of rides were on standard bikes")
 
-    with open("./output/bike_comparison.txt", "w") as file:
+    with open("./output/bike_type/bike_comparison.txt", "w") as file:
         file.write(f"{round(100*df['bike_type'].value_counts()['standard']/len(df))}% of rides were on standard bikes\n")
 
 if __name__ == "__main__":

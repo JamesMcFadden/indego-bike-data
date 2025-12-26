@@ -1,0 +1,2 @@
+Average ride time is 202 minutes
+Median ride time is 12 minutes
