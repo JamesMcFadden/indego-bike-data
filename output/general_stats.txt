@@ -1,2 +1,4 @@
 There were 9276582 from July 2015 through September 2025.
 Trip ids range from 4001912 to 1254494336
+The number of unique start stations is 335
+Station ids range from 3000 to 3441
