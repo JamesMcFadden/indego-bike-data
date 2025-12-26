@@ -1,6 +1,4 @@
-import pandas as pd
 import matplotlib.pyplot as plt
-import os
 
 from data_utils import load_indego_data
 
@@ -25,7 +23,7 @@ def analyze_commuter_behavior():
     ax.set_ylabel("Total Number of Trips", fontsize=12)
     plt.xticks(range(0, 24))
     
-    output_file = "commuter_analysis.png"
+    output_file = "../output/commuter_analysis.png"
     plt.savefig(output_file)
     print(f"Done! Chart saved to {output_file}")
 
