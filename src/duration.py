@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 
-from data_utils import load_indego_data
+from utils import load_indego_data
 
 
 def duration(limit_minutes: int = 120):

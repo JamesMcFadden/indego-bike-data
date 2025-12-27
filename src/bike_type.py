@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-from data_utils import load_indego_data
+from utils import load_indego_data
 
 def bike_type_comparison():
     

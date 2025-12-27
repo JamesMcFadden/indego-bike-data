@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from data_utils import load_indego_data
+from utils import load_indego_data
 
 
 def plot_monthly_rides():

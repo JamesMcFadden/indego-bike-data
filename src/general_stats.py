@@ -1,4 +1,4 @@
-from data_utils import load_indego_data
+from utils import load_indego_data
 
 
 def general_stats():
