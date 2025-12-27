@@ -3,7 +3,7 @@ from data_utils import load_indego_data
 
 def general_stats():
 
-    df_trips = load_indego_data(columns=['start_time', 'trip_id', 'bike_id'])
+    df_trips = load_indego_data(columns=['start_time', 'trip_id', 'bike_id', 'trip_route_category'])
     df_stations = load_indego_data(columns=['station_id', 'status'], folder='stations')
 
     df_numeric_bike_ids = df_trips[df_trips['bike_id'].apply(lambda x: str(x).isnumeric())].copy()
@@ -14,6 +14,8 @@ def general_stats():
         file.write(f"Trip ids range from {min(df_trips['trip_id'])} to {max(df_trips['trip_id'])}\n")
         file.write(f"The number of unique start stations is {len(df_stations)}\n")
         file.write(f"Station ids range from {min(df_stations['station_id'])} to {max(df_stations['station_id'])}\n")
+        file.write(f"{round(100*df_trips['trip_route_category'].value_counts()['One Way']/len(df_trips))}% of rides were one way\n")
+        file.write(f"{round(100*df_trips['trip_route_category'].value_counts()['Round Trip']/len(df_trips))}% of rides were round trip")
 
 if __name__ == "__main__":
     general_stats()

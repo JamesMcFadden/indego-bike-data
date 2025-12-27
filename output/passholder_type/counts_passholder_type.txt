@@ -1,0 +1,11 @@
+Indego Passholder Type Analysis
+==============================
+passholder_type
+Indego30        6382182
+Indego365       1837878
+Day Pass         594415
+Walk-up          422322
+IndegoFlex        29783
+One Day Pass       6767
+Two Day Pass       1603
+==============================
