@@ -47,6 +47,7 @@ def upload_file(df, base_name, s3_path):
         except Exception as e:
             print(f"Error processing {file_path}: {e}")
 
+
 if __name__ == "__main__":
     # Find all CSV files in the data folder
     search_path = os.path.join(DATA_FOLDER, "*.csv")

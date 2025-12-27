@@ -12,7 +12,6 @@ def general_stats():
     with open("../output/general_stats.txt", "w") as file:
         file.write(f"There were {len(df_trips)} from July 2015 through September 2025.\n")
         file.write(f"Trip ids range from {min(df_trips['trip_id'])} to {max(df_trips['trip_id'])}\n")
-        file.write(f"The number of unique start stations is {len(df_stations)}\n")
         file.write(f"Station ids range from {min(df_stations['station_id'])} to {max(df_stations['station_id'])}\n")
         file.write(f"{round(100*df_trips['trip_route_category'].value_counts()['One Way']/len(df_trips))}% of rides were one way\n")
         file.write(f"{round(100*df_trips['trip_route_category'].value_counts()['Round Trip']/len(df_trips))}% of rides were round trip")
