@@ -1,0 +1,6 @@
+The minimum bike id is 0
+The maximum bike id is 55195
+The number of bikes used for rides is 6318
+The average number of bikes per dock is 19
+The most frequently used bike ID is 5351 with 7541 rides.
+The least frequently used bike ID is 49 with 1 rides.

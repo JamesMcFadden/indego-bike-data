@@ -2,11 +2,18 @@ import matplotlib.pyplot as plt
 
 from data_utils import load_indego_data
 
-def analyze_commuter_behavior():
+def passholder_behavior():
     
-    df = load_indego_data(columns=['start_time', 'passholder_type'])
+    df = load_indego_data(columns=['start_time', 'passholder_type', 'plan_duration'])
 
     print(f"Data loaded. Total trips: {len(df):,}")
+
+    # 1. Calculate the counts
+    counts = df['plan_duration'].value_counts()
+
+    # 2. Write to a .txt file
+    with open('../output/passholder_type/plan_duration_counts.txt', 'w') as f:
+        f.write(counts.to_string())
 
     df['hour'] = df['start_time'].dt.hour
     df['rider_group'] = df['passholder_type'].apply(
@@ -23,9 +30,9 @@ def analyze_commuter_behavior():
     ax.set_ylabel("Total Number of Trips", fontsize=12)
     plt.xticks(range(0, 24))
     
-    output_file = "../output/commuter_analysis.png"
+    output_file = "../output/passholder_type/commuter_analysis.png"
     plt.savefig(output_file)
     print(f"Done! Chart saved to {output_file}")
 
 if __name__ == "__main__":
-    analyze_commuter_behavior()
+    passholder_behavior()
